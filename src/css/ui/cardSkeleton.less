@@ -1,0 +1,69 @@
+@import '../vars/index';
+
+.cardSkeleton {
+  width: 234px;
+  max-width: 234px;
+  height: 440px;
+  border: 1px solid @c-grey-light;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-sizing: border-box;
+
+  &__title {
+    height: 34px;
+    padding-left: 12px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+
+    &:before {
+      .skeleton(80px, 18px);
+    }
+  }
+
+  &__image {
+    .skeleton(100%, 200px);
+
+    width: 100%;
+    height: 200px;
+  }
+
+  &__data {
+    padding: 10px 0;
+  }
+
+  &__item {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    min-height: 22px;
+
+    &:before {
+      .skeleton(70px, 14px);
+
+      margin-left: 12px;
+    }
+
+    &:after {
+      .skeleton(94px, 12px);
+
+      margin-left: 12px;
+    }
+  }
+}
+
+@media (max-width: 516px) {
+  .cardSkeleton {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media @breakpoint-xl {
+  .cardSkeleton {
+    width: 254px;
+    max-width: 254px;
+  }
+}

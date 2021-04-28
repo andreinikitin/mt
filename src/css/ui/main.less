@@ -1,0 +1,61 @@
+@import '../vars/index';
+
+.main {
+  padding: 16px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -8px -8px 0;
+  }
+
+  &__item {
+    margin: 8px;
+  }
+}
+
+@media (max-width: 516px) {
+  .main {
+    &__content {
+      width: 100%;
+    }
+
+    &__item {
+      width: 100%;
+    }
+  }
+}
+
+@media (min-width: 516px) {
+  .main__content {
+    width: 500px;
+  }
+}
+
+@media @breakpoint-s {
+  .main__content {
+    width: 500px;
+  }
+}
+
+@media @breakpoint-m {
+  .main__content {
+    width: 750px;
+  }
+}
+
+@media @breakpoint-l {
+  .main__content {
+    width: 1000px;
+  }
+}
+
+@media @breakpoint-xl {
+  .main__content {
+    width: 1350px;
+  }
+}

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="utf-8">
+  <title>Metaquotes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <style>
+    @-webkit-keyframes skeleton {
+      0% {
+        background-color: #ced1d6;
+      }
+
+      50% {
+        background-color: #f5f5f5;
+      }
+
+      100% {
+        background-color: #ced1d6;
+      }
+    }
+    @-moz-keyframes skeleton {
+      0% {
+        background-color: #ced1d6;
+      }
+
+      50% {
+        background-color: #f5f5f5;
+      }
+
+      100% {
+        background-color: #ced1d6;
+      }
+    }
+    @keyframes skeleton {
+      0% {
+        background-color: #ced1d6;
+      }
+
+      50% {
+        background-color: #f5f5f5;
+      }
+
+      100% {
+        background-color: #ced1d6;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="header">
+  <div class="title">What is Lorem Ipsum</div>
+  <div class="header__content">
+    <div class="chart">
+      <svg
+          viewBox="0 0 400 200"
+          xmlns="http://www.w3.org/2000/svg"
+          preserveAspectRatio="xMidYMin slice"
+          class="chart__svg"
+      >
+        <defs>
+          <linearGradient id="gradient" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="10%" stop-color="rgba(137,187,241,0.6)"></stop>
+            <stop offset="90%" stop-color="rgba(255,255,255,0.5)"></stop>
+          </linearGradient>
+        </defs>
+        <g id="chartData"></g>
+      </svg>
+    </div>
+    <div class="filters">
+      <form class="filters__item">
+        <div class="seasons" id="seasons">
+          <div class="subtitle">Appearance:</div>
+          <div class="seasons__inputs">
+            <input
+                class="seasons__input"
+                type="checkbox"
+                id="season1"
+                value="1"
+            />
+            <label for="season1" class="seasons__button">Season 1</label>
+            <input
+                class="seasons__input"
+                type="checkbox"
+                id="season2"
+                value="2"
+            />
+            <label for="season2" class="seasons__button">Season 2</label>
+            <input
+                class="seasons__input"
+                type="checkbox"
+                id="season3"
+                value="3"
+            />
+            <label for="season3" class="seasons__button">Season 3</label>
+            <input
+                class="seasons__input"
+                type="checkbox"
+                id="season4"
+                value="4"
+            />
+            <label for="season4" class="seasons__button">Season 4</label>
+            <input
+                class="seasons__input"
+                type="checkbox"
+                id="season5"
+                value="5"
+            />
+            <label for="season5" class="seasons__button">Season 5</label>
+          </div>
+        </div>
+      </form>
+      <div class="filters__item">
+        <div class="status">
+          <div class="subtitle">Status:</div>
+          <div class="dropdown">
+            <div class="dropdown__input" role="button" id="status">
+              <div class="dropdown__value" id="statusValue">Alive</div>
+              <div class="dropdown__icon">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 491.996 491.996"
+                    width="14"
+                    height="14"
+                    fill="#aab1b9"
+                >
+                  <path d="M484.132 124.986l-16.116-16.228c-5.072-5.068-11.82-7.86-19.032-7.86-7.208 0-13.964 2.792-19.036 7.86l-183.84 183.848L62.056 108.554c-5.064-5.068-11.82-7.856-19.028-7.856s-13.968 2.788-19.036 7.856l-16.12 16.128c-10.496 10.488-10.496 27.572 0 38.06l219.136 219.924c5.064 5.064 11.812 8.632 19.084 8.632h.084c7.212 0 13.96-3.572 19.024-8.632l218.932-219.328c5.072-5.064 7.856-12.016 7.864-19.224 0-7.212-2.792-14.068-7.864-19.128z" />
+                </svg>
+              </div>
+            </div>
+            <div class="dropdown__list">
+              <div class="dropdown__item">Alive</div>
+              <div class="dropdown__item">Deceased</div>
+              <div class="dropdown__item">Presumed dead</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="filters__item">
+        <div class="action">
+          <button type="submit" id="submit" class="action__submit" disabled>Search</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<main class="main">
+  <div class="main__content" id="content">
+    <div class="main__item main__item-skeleton">
+      <div class="cardSkeleton">
+        <div class="cardSkeleton__title"></div>
+        <div class="cardSkeleton__image"></div>
+        <div class="cardSkeleton__data">
+          <div class="cardSkeleton__item">
+            <div class="cardSkeleton__subtitle"></div>
+            <div class="cardSkeleton__text"></div>
+          </div>
+          <div class="cardSkeleton__item">
+            <div class="cardSkeleton__subtitle"></div>
+            <div class="cardSkeleton__text"></div>
+          </div>
+          <div class="cardSkeleton__item">
+            <div class="cardSkeleton__subtitle"></div>
+            <div class="cardSkeleton__text"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main__item main__item-skeleton">
+      <div class="cardSkeleton">
+        <div class="cardSkeleton__title"></div>
+        <div class="cardSkeleton__image"></div>
+        <div class="cardSkeleton__data">
+          <div class="cardSkeleton__item">
+            <div class="cardSkeleton__subtitle"></div>
+            <div class="cardSkeleton__text"></div>
+          </div>
+          <div class="cardSkeleton__item">
+            <div class="cardSkeleton__subtitle"></div>
+            <div class="cardSkeleton__text"></div>
+          </div>
+          <div class="cardSkeleton__item">
+            <div class="cardSkeleton__subtitle"></div>
+            <div class="cardSkeleton__text"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main__item main__item-skeleton">
+      <div class="cardSkeleton">
+        <div class="cardSkeleton__title"></div>
+        <div class="cardSkeleton__image"></div>
+        <div class="cardSkeleton__data">
+          <div class="cardSkeleton__item">
+            <div class="cardSkeleton__subtitle"></div>
+            <div class="cardSkeleton__text"></div>
+          </div>
+          <div class="cardSkeleton__item">
+            <div class="cardSkeleton__subtitle"></div>
+            <div class="cardSkeleton__text"></div>
+          </div>
+          <div class="cardSkeleton__item">
+            <div class="cardSkeleton__subtitle"></div>
+            <div class="cardSkeleton__text"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main__item main__item-skeleton">
+      <div class="cardSkeleton">
+        <div class="cardSkeleton__title"></div>
+        <div class="cardSkeleton__image"></div>
+        <div class="cardSkeleton__data">
+          <div class="cardSkeleton__item">
+            <div class="cardSkeleton__subtitle"></div>
+            <div class="cardSkeleton__text"></div>
+          </div>
+          <div class="cardSkeleton__item">
+            <div class="cardSkeleton__subtitle"></div>
+            <div class="cardSkeleton__text"></div>
+          </div>
+          <div class="cardSkeleton__item">
+            <div class="cardSkeleton__subtitle"></div>
+            <div class="cardSkeleton__text"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main__item main__item-skeleton">
+      <div class="cardSkeleton">
+        <div class="cardSkeleton__title"></div>
+        <div class="cardSkeleton__image"></div>
+        <div class="cardSkeleton__data">
+          <div class="cardSkeleton__item">
+            <div class="cardSkeleton__subtitle"></div>
+            <div class="cardSkeleton__text"></div>
+          </div>
+          <div class="cardSkeleton__item">
+            <div class="cardSkeleton__subtitle"></div>
+            <div class="cardSkeleton__text"></div>
+          </div>
+          <div class="cardSkeleton__item">
+            <div class="cardSkeleton__subtitle"></div>
+            <div class="cardSkeleton__text"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+</body>
+</html>

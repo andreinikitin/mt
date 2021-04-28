@@ -1,0 +1,70 @@
+{
+	"extends": [
+		"eslint:recommended"
+	],
+	"parser": "babel-eslint",
+	"plugins": [],
+	"globals": {
+		"document": true,
+		"window": true,
+		"HTMLElement": true,
+		"XMLHttpRequest": true,
+		"module": true,
+		"require": true,
+		"Promise": true
+	},
+	"env": {
+		"browser": true
+	},
+	"parserOptions": {
+		"ecmaVersion": 6,
+		"sourceType": "module"
+	},
+	"settings": {
+		"import/resolver": {
+			"node": {
+				"paths": ["src", "."]
+			}
+		}
+	},
+	"rules": {
+		"comma-dangle": [2, "always-multiline"],
+		"complexity": [2, { "max": 8 }],
+		"semi": [1, "never"],
+		"key-spacing": ["error", { "mode": "strict" }],
+		"no-multi-spaces": [0],
+		"space-before-function-paren": ["error", "never"],
+		"padded-blocks": [0],
+		"no-return-assign": [0],
+		"no-unused-vars": [
+			"error",
+			{ "argsIgnorePattern": "^_" }
+		],
+		"strict": [0],
+		"import/order": 0,
+		"indent": [
+			1,
+			2,
+			{ "SwitchCase": 1 } // теперь `case` будет не на одном уровне со `switch`
+		],
+		"no-console": ["error", { "allow": ["warn", "error"] }]
+	},
+	"overrides": [
+		{
+			"files": [
+				"**/lineChart.js"
+			],
+			"rules": {
+				"max-len": 0
+			}
+		},
+		{
+			"files": [
+				"**/array.from.js"
+			],
+			"rules": {
+				"complexity": ["error", { "max": 12 }]
+			}
+		}
+	]
+}

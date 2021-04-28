@@ -1,0 +1,9 @@
+node_modules/*
+build/*
+tools/*
+types/*
+flow-typed/*
+**/__mocks__/*
+**/__tests__/*
+/tools
+src/components/LayoutMachine/try.machine.js

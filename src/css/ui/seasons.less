@@ -1,0 +1,43 @@
+@import '../vars/index';
+
+.seasons {
+  width: 100%;
+
+  &__inputs {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  &__input {
+    position: absolute;
+    z-index: -100;
+  }
+
+  &__button {
+    .m-font-body();
+    .m-button-secondary-inverted();
+
+    margin: 4px 8px 4px 0;
+    white-space: nowrap;
+    user-select: none;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.seasons__input:checked + .seasons__button {
+  background-color: @c-almost-white;
+
+  &:active {
+    opacity: 0.8;
+  }
+}
+
+@media @breakpoint-m {
+  .seasons__inputs {
+    flex-wrap: nowrap;
+  }
+}

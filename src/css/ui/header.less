@@ -1,0 +1,99 @@
+@import '../vars/index';
+
+.header {
+    width: 100%;
+    background: @c-primary-dark;
+    padding: 16px;
+    box-sizing: border-box;
+
+    &__content {
+      display: flex;
+      align-items: flex-start;
+      flex-grow: 1;
+      flex-shrink: 0;
+    }
+  }
+
+  .title {
+    .m-font-heading-1();
+
+    color: @c-white;
+    padding-bottom: 12px;
+  }
+
+  .subtitle {
+    .m-font-body();
+
+    color: @c-white;
+    padding-bottom: 8px;
+  }
+
+  .chart {
+    background-color: @c-primary-dark;
+    width: 530px;
+    min-width: 530px;
+    padding: 8px 8px 0 0;
+    position: relative;
+
+    &__svg {
+      width: 100%;
+    }
+  }
+
+  .filters {
+    padding: 0 0 0 8px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+
+    &__item {
+      margin-right: 16px;
+    }
+  }
+
+  @media @breakpoint-max-s {
+    .header__content {
+      flex-direction: column-reverse;
+    }
+
+    .chart {
+      width: 100%;
+      min-width: 100%;
+      padding: 16px 0;
+    }
+
+    .filters {
+      padding: 0;
+      width: 100%;
+
+      &__item:not(:first-child) {
+        width: 100%;
+        min-width: 100%;
+      }
+    }
+  }
+
+  @media @breakpoint-m {
+    .header__content {
+      flex-direction: column;
+    }
+
+    .chart {
+      padding: 0 0 16px 0;
+    }
+  }
+
+  @media @breakpoint-min-l {
+    .filters {
+      &__item:first-child {
+        width: 100%;
+      }
+    }
+  }
+
+  @media all and (-ms-high-contrast: none) {
+    *::-ms-backdrop, .chart__svg {
+      width: 100%;
+      padding-bottom: 25%;
+    }
+  }

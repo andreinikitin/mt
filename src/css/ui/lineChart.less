@@ -1,0 +1,31 @@
+@import '../vars/index';
+
+.chart {
+  &__gradient {
+    fill: url(#gradient);
+  }
+
+  &__line {
+    fill: none;
+    stroke: @c-white;
+    stroke-width: 2;
+    stroke-opacity: 0.8;
+  }
+
+  &__points {
+    fill: @c-primary-dark;
+    stroke: @c-white;
+    stroke-width: 2.5;
+  }
+
+  &__gridLine {
+    stroke: fade(@c-white, 40%);
+    stroke-width: 1.5;
+    stroke-opacity: 0.8;
+  }
+
+  &__legend {
+    fill: @c-white;
+    font-size: 10px;
+  }
+}

@@ -1,0 +1,23 @@
+@import '../vars/index';
+
+.action {
+  padding: 26px 0 0;
+
+  &__submit {
+    .m-font-body();
+    .m-button-primary();
+
+    width: 180px;
+    margin: 4px 0;
+  }
+}
+
+@media @breakpoint-max-s {
+  .action {
+    padding-top: 16px;
+
+    &__submit {
+      width: 100%;
+    }
+  }
+}
